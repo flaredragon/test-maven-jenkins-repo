@@ -1,6 +1,6 @@
 package com.training.jenkins.runner;
 
-public class runner {
+public class runners {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

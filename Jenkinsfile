@@ -16,14 +16,11 @@ pipeline {
             // To run Maven on a Windows agent, use
             // bat "mvn -Dmaven.test.failure.ignore=true clean package"
          }
+      }
+      stage('Run') {
+         steps {
+            sh "java -cp target/factorial-0.0.1-SNAPSHOT.jar "com.training.jenkins.runner.runners"
 
-         post {
-            // If Maven was able to run the tests, even if some of the test
-            // failed, record the test results and archive the jar file.
-            success {
-               junit '**/target/surefire-reports/TEST-*.xml'
-               archiveArtifacts 'target/*.jar'
-            }
          }
       }
    }

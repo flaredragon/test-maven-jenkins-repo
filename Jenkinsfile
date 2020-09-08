@@ -19,8 +19,7 @@ pipeline {
       }
       stage('Run') {
          steps {
-            sh "java -cp target/factorial-0.0.1-SNAPSHOT.jar "com.training.jenkins.runner.runners"
-
+            sh "java -cp target/factorial-0.0.1-SNAPSHOT.jar com.training.jenkins.runner.runners"
          }
       }
    }
